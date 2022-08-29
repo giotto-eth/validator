@@ -19,7 +19,6 @@ options=(
 "Inject Snapshot 135749 Height 1GB"
 "Start with State Sync"
 "Add Addrbook"
-"Delete Node"
 "Exit")
 select opt in "${options[@]}"
 do
@@ -212,11 +211,6 @@ sudo systemctl restart strided && journalctl -u strided -f -o cat
 
 break
 ;;
-
-"Delete Node")
-sudo systemctl stop strided && sudo systemctl disable strided
-rm -rf $HOME/stride $HOME/.stride /etc/systemd/system/strided.service $(which strided)
-break
 
 "Exit")
 exit
