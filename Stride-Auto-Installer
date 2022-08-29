@@ -19,7 +19,7 @@ options=(
 "Inject Snapshot 135749 Height 1GB"
 "Start with State Sync"
 "Add Addrbook"
-"Delete Node!"
+"Delete Node"
 "Exit")
 select opt in "${options[@]}"
 do
