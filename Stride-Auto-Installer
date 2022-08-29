@@ -1,10 +1,14 @@
-# Stride Validator Auto Installer
+#!/bin/bash
+
 while true
 do
-# Header Include
+
+# Logo
+
 echo "========================================================================================================================"
-curl -s https://raw.githubusercontent.com/giotto-eth/validator/main/header.sh | bash
+curl -s https://raw.githubusercontent.com/StakeTake/script/main/logo.sh | bash
 echo "========================================================================================================================"
+
 # Menu
 
 PS3='Select an action: '
@@ -64,7 +68,7 @@ strided init $NODENAME --chain-id $CHAIN_ID
 
 
 echo "============================================================"
-echo "Be sure to write down the mnemonic! You wont be able to recover it later!"
+echo "Be sure to write down the mnemonic!"
 echo "============================================================"
 #WALLET
 strided keys add $WALLETNAME
